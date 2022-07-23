@@ -4,4 +4,4 @@ env:
   mocha: true
 extends: eslint:recommended
 rules:
-  quotes: ['warn', 'single', {"avoidEscape": true}]
+  quotes: ['off', 'single', { 'avoidEscape': true }]
