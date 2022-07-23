@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
-    "test": "mocha 'utils/**/*.js'"
+    "test": "mocha 'utils/**/*.js'",
+    "lint": "npx eslint . --ext .js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,7 @@
   "homepage": "https://github.com/ifeasome/voicemail-api#readme",
   "dependencies": {
     "chai": "^4.3.6",
+    "eslint": "^8.20.0",
     "mocha": "^10.0.0",
     "sinon": "^14.0.0"
   },
