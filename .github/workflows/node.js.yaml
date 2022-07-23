@@ -36,18 +36,19 @@ jobs:
     - name: npm install and test
       run: |
         npm install
-        npm test    
- lint:
-  runs-on: ubuntu-latest
+        npm test
 
-  steps:
-  - name: Checkout code
-    uses: actions/checkout@v2
-  - name: Set up Node.js
-    uses: actions/setup-node@v1
-    with:
-      node-version: '14.x'
-  - name: npm install and lint
-    run: |
-      npm install
-      npm run lint
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+    - name: npm install and lint
+      run: |
+        npm install
+        npm run lint
