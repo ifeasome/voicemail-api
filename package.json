@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install"
     "test": "mocha 'utils/**/*.js'"
   },
   "repository": {
@@ -21,5 +22,8 @@
     "chai": "^4.3.6",
     "mocha": "^10.0.0",
     "sinon": "^14.0.0"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0"
   }
 }
