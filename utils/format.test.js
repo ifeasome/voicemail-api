@@ -11,6 +11,8 @@ const {
 
 sinon.useFakeTimers(new Date(2020, 11, 11, 11));
 
+console.log('test');
+
 describe("Formatting", () => {
   describe("Text", () => {
     it("should convert email addresses to links", () => {
