@@ -94,3 +94,5 @@ describe("Formatting", () => {
       });
   });
 });
+
+console.log('test');
