@@ -1,3 +1,4 @@
+//months array
 const months = [
     'January',
     'February',

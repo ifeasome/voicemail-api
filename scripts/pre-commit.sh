@@ -1,4 +1,3 @@
-
 #!/bin/sh
 PATTERN="password *(=|:) *(\`|'|\")"
 FILES=$(git diff --cached --name-only -G"$PATTERN" -i)
