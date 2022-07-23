@@ -6,21 +6,49 @@ on:
       - main
       - develop
 
-
 jobs:
   test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+    env:
+      PGHOST: localhost
+      PGPORT: 5432
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      POSTGRES_DB: temp_db
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '14.x'
+    - name: npm install and test
+      run: |
+        npm install
+        npm test
+
+  lint:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      
     - name: Set up Node.js
       uses: actions/setup-node@v1
       with:
         node-version: '14.x'
-
-     - name: npm install and test
+    - name: npm install and lint
       run: |
         npm install
-        npm test
+        npm run lint
