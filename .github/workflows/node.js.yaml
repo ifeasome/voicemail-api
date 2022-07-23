@@ -25,21 +25,17 @@ env:
   PGUSER: postgres
   PGPASSWORD: postgres
   POSTGRES_DB: temp_db
-  
-steps: 
-  - 
-    name: "Checkout code"
+
+  steps:
+  - name: Checkout code
     uses: actions/checkout@v2
-  - 
-    name: "Set up Node.js"
+  - name: Set up Node.js
     uses: actions/setup-node@v1
-    with: 
-      node-version: 14.x
-  - 
-    name: "Create database"
-    run: "psql -tc 'CREATE DATABASE temp_db;'"
-  - 
-    name: "npm install and test"
-    run: |-
-        npm install
-        npm test
+    with:
+      node-version: "14.x"
+  - name: Create database
+    run: psql -tc 'CREATE DATABASE temp_db;'
+  - name: npm install and test
+    run: |
+      npm install
+      npm test
