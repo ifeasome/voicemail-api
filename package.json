@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha 'utils/**/*.js'"
+    "test": "mocha 'utils/**/*.js'",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
