@@ -21,6 +21,7 @@ module.exports = {
       return `<a href="mailto:${match}">${match}</a>`;
     });
   },
+  //format phone
   formatPhone: (num) => {
     const number = num.toString();
 

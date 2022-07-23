@@ -13,6 +13,8 @@ console.log('test');
 
 sinon.useFakeTimers(new Date(2020, 11, 11, 11));
 
+console.log('run test');
+
 describe("Formatting", () => {
   describe("Text", () => {
     it("should convert email addresses to links", () => {
