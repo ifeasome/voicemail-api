@@ -9,6 +9,8 @@ const {
   formatPhone,
 } = require("../utils/format");
 
+console.log('test');
+
 sinon.useFakeTimers(new Date(2020, 11, 11, 11));
 
 console.log('test');
