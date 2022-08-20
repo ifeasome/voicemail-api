@@ -58,7 +58,8 @@ jobs:
   deploy:
     needs: test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master' && needs.test.result == 'success'
+
 
     steps:
     - name: SSH and deploy app
