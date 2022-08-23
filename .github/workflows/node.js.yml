@@ -59,7 +59,7 @@ jobs:
           pm2 restart vm-app
   lint:
     runs-on: ubuntu-latest
-    
+
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
