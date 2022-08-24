@@ -3,7 +3,7 @@ name: Node Github CI
 on:
   push:
     branches:
-      - main
+      - master
       - develop
 
 jobs:
@@ -58,7 +58,7 @@ jobs:
   deploy:
     needs: test
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/develop' 
+    if: github.ref == 'refs/heads/master' 
 
     steps:
     - name: SSH and deploy app
